@@ -16,7 +16,9 @@ RUN apt-get update \
 COPY --from=vendor /app/vendor /app/vendor
 COPY . .
 
-RUN php artisan package:discover --ansi
+RUN mkdir -p /app/bootstrap/cache /app/storage/logs \
+    && chmod -R 777 /app/bootstrap/cache /app/storage \
+    && php artisan package:discover --ansi
 
 EXPOSE 8000
 
