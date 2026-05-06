@@ -2,7 +2,7 @@ FROM composer:2 AS vendor
 
 WORKDIR /app
 COPY composer.json composer.lock ./
-RUN composer install --no-interaction --prefer-dist --no-progress
+RUN composer install --no-interaction --prefer-dist --no-progress --no-scripts
 
 FROM php:8.2-cli
 
@@ -15,6 +15,8 @@ RUN apt-get update \
 
 COPY --from=vendor /app/vendor /app/vendor
 COPY . .
+
+RUN php artisan package:discover --ansi
 
 EXPOSE 8000
 
