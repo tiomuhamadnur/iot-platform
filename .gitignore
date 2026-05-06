@@ -1,0 +1,55 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Root secrets and local runtime
+.env
+.env.*
+!.env.example
+*.log
+*.pid
+
+# Node
+node_modules/
+.next/
+dist/
+
+# PHP / Laravel
+vendor/
+services/api-laravel/.env
+services/api-laravel/bootstrap/cache/*.php
+services/api-laravel/storage/*.key
+services/api-laravel/storage/logs/*.log
+services/api-laravel/storage/framework/cache/**
+services/api-laravel/storage/framework/sessions/**
+services/api-laravel/storage/framework/testing/**
+services/api-laravel/storage/framework/views/**
+services/api-laravel/public/build/
+services/api-laravel/public/hot
+services/api-laravel/database/database.sqlite
+
+# Frontend local env and generated files
+frontend/.env.local
+frontend/.env.production
+frontend/node_modules/
+frontend/.next/
+frontend/next-dev.out.log
+frontend/next-dev.err.log
+
+# Go
+*.exe
+*.test
+coverage.out
+
+# Python
+__pycache__/
+*.pyc
+
+# Local artifacts
+databases/**/*
+!databases/.gitkeep
+services/api-laravel/storage/logs/artisan-serve.out.log
+services/api-laravel/storage/logs/artisan-serve.err.log

@@ -1,0 +1,13 @@
+{
+  "name": "device-simulator",
+  "version": "1.0.0",
+  "description": "IoT Device Simulator for Testing",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "mqtt": "^5.0.0",
+    "dotenv": "^16.3.1"
+  }
+}

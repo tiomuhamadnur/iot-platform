@@ -1,0 +1,14 @@
+{
+  "name": "websocket-service",
+  "version": "1.0.0",
+  "description": "IoT Realtime WebSocket Service",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "socket.io": "^4.7.2",
+    "ioredis": "^5.3.2",
+    "dotenv": "^16.3.1"
+  }
+}
